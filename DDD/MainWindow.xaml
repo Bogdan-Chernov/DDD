@@ -1,0 +1,26 @@
+﻿<Window x:Class="DDD.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DDD"
+        mc:Ignorable="d"
+       Title="Main" Height="585.661" Width="565.508">
+    <Canvas Margin="0,0,116.6,57.4">
+        <Label Content="Название специальности:" Canvas.Left="29" Canvas.Top="20" />
+        <TextBox x:Name="tbNameGroup" Height="33" Width="230" Canvas.Left="29" Canvas.Top="51" />
+        <TextBox x:Name="tbNumberGroup" Height="33" Width="230" Canvas.Left="29" Canvas.Top="128" />
+        <TextBox x:Name="tbCurator" Height="33" Width="230" Canvas.Left="29" Canvas.Top="211" />
+        <Label Content="Номер группы:" Canvas.Left="29" Canvas.Top="102" />
+        <Label Content="ФИО Куратора:" Canvas.Left="29" Canvas.Top="185" />
+        <TextBox x:Name="tbIdGroup" Height="33" Width="230" Canvas.Left="29" Canvas.Top="287" />
+        <Label Content="Id группы:" Canvas.Left="29" Canvas.Top="255" />
+        <Button x:Name="btnAdd" Content="Добавить" Height="44" Width="530" Canvas.Left="7" Canvas.Top="363" VerticalAlignment="Top" HorizontalAlignment="Center" Click="btnAdd_Click"/>
+        <Button x:Name="btnDel" Content="Удалить" Height="44" Width="530" Canvas.Left="7" Canvas.Top="427" VerticalAlignment="Top" HorizontalAlignment="Center" Click="btnDel_Click"/>
+        <Button x:Name="btnUpd" Content="Изменить" Height="44" Width="530" Canvas.Left="7" Canvas.Top="493" VerticalAlignment="Top" HorizontalAlignment="Center" Click="btnUpd_Click"/>
+        <ListView x:Name="lvViewGroup"  Height="300" Width="249" Canvas.Left="288" Canvas.Top="36" DisplayMemberPath="NumberGroup" >
+
+        </ListView>
+        <Label Content="Список групп:" Canvas.Left="288" Canvas.Top="10" />
+    </Canvas>
+</Window>

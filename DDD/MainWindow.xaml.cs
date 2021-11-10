@@ -25,11 +25,11 @@ namespace DDD
             InitializeComponent();
         }
 
-        void Fer()
+        void UpdListView()
         {
             DataClass main = new DataClass();
 
-            lvViewGroup.ItemsSource = main.ReadGr();
+            lvViewGroup.ItemsSource = main.ReadGroup();
         }
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
@@ -39,19 +39,19 @@ namespace DDD
                 {
                     Group group = new Group()
                     {
-                        NameGr = tbNameGroup.Text,
-                        NumberGr = tbNumberGroup.Text,
-                        CuratorGr = tbCurator.Text
+                        NameGroup = tbNameGroup.Text,
+                        NumberGroup = tbNumberGroup.Text,
+                        CuratorGroup = tbCurator.Text
                     };
 
                     DataClass main = new DataClass();
 
-                    main.AddGr(group);
-                    Fer();
+                    main.AddGroup(group);
+                    UpdListView();
                 }
                 else
                 {
-                    MessageBox.Show("Поле пустое");
+                    MessageBox.Show("НЕдопустимые данные для полей");
                 }
             }
             catch (Exception error)
@@ -63,22 +63,25 @@ namespace DDD
 
         private void btnDel_Click(object sender, RoutedEventArgs e)
         {
-
             try
             {
                 if (!String.IsNullOrWhiteSpace(tbIdGroup.Text))
                 {
                     Group group = new Group()
                     {
-                        idGr = Convert.ToInt32(tbIdGroup.Text)
+                        idGroup = Convert.ToInt32(tbIdGroup.Text)
                     };
                     DataClass main = new DataClass();
-                    main.DelGr(group);
-                    Fer();
+                    main.DelGroup(group);
+                    UpdListView();
+                    tbNameGroup.Clear();
+                    tbCurator.Clear();
+                    tbNumberGroup.Clear();
+                    tbIdGroup.Text = "";
                 }
                 else
                 {
-                    MessageBox.Show("Поле пустое");
+                    MessageBox.Show("НЕдопустимые данные для полей");
                 }
             }
             catch (Exception error)
@@ -91,22 +94,22 @@ namespace DDD
         {
             try
             {
-                if (!String.IsNullOrWhiteSpace(tbNameGroup.Text) || !String.IsNullOrWhiteSpace(tbNumberGroup.Text) || !String.IsNullOrWhiteSpace(tbCurator.Text) || !String.IsNullOrWhiteSpace(tbIdGroup.Text))
+                if (!String.IsNullOrWhiteSpace(tbNameGroup.Text) && !String.IsNullOrWhiteSpace(tbNumberGroup.Text) && !String.IsNullOrWhiteSpace(tbCurator.Text) && !String.IsNullOrWhiteSpace(tbIdGroup.Text))
                 {
                     Group group = new Group()
                     {
-                        idGr = Convert.ToInt32(tbIdGroup.Text),
-                        NameGr = tbNameGroup.Text,
-                        NumberGr = tbNumberGroup.Text,
-                        CuratorGr = tbCurator.Text
+                        idGroup = Convert.ToInt32(tbIdGroup.Text),
+                        NameGroup = tbNameGroup.Text,
+                        NumberGroup = tbNumberGroup.Text,
+                        CuratorGroup = tbCurator.Text
                     };
                     DataClass main = new DataClass();
-                    main.UpdGr(group);
-                    Fer();
+                    main.UpdGroup(group);
+                    UpdListView();
                 }
                 else
                 {
-                    MessageBox.Show("Поля пустые");
+                    MessageBox.Show("НЕдопустимые данные для полей");
                 }
             }
             catch (Exception error)

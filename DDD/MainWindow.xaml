@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DDD"
         mc:Ignorable="d"
-       Title="Main" Height="585.661" Width="565.508">
-    <Canvas Margin="0,0,116.6,57.4">
+       Title="M" Height="585.661" Width="565.508">
+    <Canvas Margin="0,0,3.2,-3">
         <Label Content="Название специальности:" Canvas.Left="29" Canvas.Top="20" />
         <TextBox x:Name="tbNameGroup" Height="33" Width="230" Canvas.Left="29" Canvas.Top="51" />
         <TextBox x:Name="tbNumberGroup" Height="33" Width="230" Canvas.Left="29" Canvas.Top="128" />
         <TextBox x:Name="tbCurator" Height="33" Width="230" Canvas.Left="29" Canvas.Top="211" />
         <Label Content="Номер группы:" Canvas.Left="29" Canvas.Top="102" />
         <Label Content="ФИО Куратора:" Canvas.Left="29" Canvas.Top="185" />
-        <TextBox x:Name="tbIdGroup" Height="33" Width="230" Canvas.Left="29" Canvas.Top="287" />
+        <TextBox x:Name="tbIdGroup" Height="33" Width="230" Canvas.Left="29" Canvas.Top="286" />
         <Label Content="Id группы:" Canvas.Left="29" Canvas.Top="255" />
         <Button x:Name="btnAdd" Content="Добавить" Height="44" Width="530" Canvas.Left="7" Canvas.Top="363" VerticalAlignment="Top" HorizontalAlignment="Center" Click="btnAdd_Click"/>
         <Button x:Name="btnDel" Content="Удалить" Height="44" Width="530" Canvas.Left="7" Canvas.Top="427" VerticalAlignment="Top" HorizontalAlignment="Center" Click="btnDel_Click"/>
